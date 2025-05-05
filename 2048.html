@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+            position: relative;
+        }
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f77d48;
+            color: white;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 10px;
+            background-color: #bbada0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .tile {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #cdc1b4;
+            border-radius: 5px;
+        }
+        .tile[data-value="2"] {
+            background-color: #e7e7e7;
+        }
+        .tile[data-value="4"] {
+            background-color: #ffeeb7;
+        }
+        .tile[data-value="8"] {
+            background-color: #ffb876;
+        }
+        .tile[data-value="16"] {
+            background-color: #fc9636;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon">&#9776;</div>
+        <div class="logo">2048</div>
+        <div class="buttons">
+            <button class="button">Feedback</button>
+            <button class="button">New Game</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="tile" data-value="2">2</div>
+        <div class="tile" data-value="4">4</div>
+        <div class="tile" data-value="8">8</div>
+        <div class="tile" data-value="16">16</div>        
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+</body>
+</html>
